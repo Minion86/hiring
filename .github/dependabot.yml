@@ -1,0 +1,18 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/client"
+    schedule:
+      interval: "weekly"
+    groups:
+      security-updates:
+        applies-to: security-updates
+        patterns: ["*"]
+  - package-ecosystem: "composer"
+    directory: "/server/public"
+    schedule:
+      interval: "weekly"
+    groups:
+      security-updates:
+        applies-to: security-updates
+        patterns: ["*"]
